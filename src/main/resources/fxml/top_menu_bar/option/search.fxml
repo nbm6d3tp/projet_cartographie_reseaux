@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="option" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.topmenubar.option.SearchController">
+   <fx:define>
+        <fx:include fx:id="contextMenu" source="../context_menu/search_context_menu.fxml" />
+   </fx:define>
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+         <children>
+            <ImageView fx:id="icon" fitHeight="30.0" fitWidth="30.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" styleClass="hover-image">
+               <image>
+                  <Image url="@../../../icons/search.png" />
+               </image>
+            </ImageView>
+            <StackPane fx:id="searchBar" minHeight="-Infinity" minWidth="-Infinity" visible="false" HBox.hgrow="ALWAYS">
+               <children>
+                  <TextField fx:id="searchTextField" minHeight="-Infinity" minWidth="-Infinity" prefWidth="0.0" styleClass="search-text-field" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+      <StackPane fx:id="indicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+   <stylesheets>
+      <URL value="@../../../css/top_menu_bar/search_styles.css" />
+      <URL value="@../../../css/custom-scroll-pane.css" />
+      <URL value="@../../../css/top_menu_bar/context_menu_styles.css" />
+      <URL value="@../../../css/global_styles.css" />
+   </stylesheets>
+</VBox>

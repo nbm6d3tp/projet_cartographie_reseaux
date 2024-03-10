@@ -1,0 +1,45 @@
+.transparent-background {
+    -fx-background-color: transparent;
+}
+
+.text {
+    -fx-text-fill: #5F5F5F !important;
+}
+
+.low-text {
+    -fx-text-fill: #7F7F7F !important;
+}
+
+.bold-text {
+    -fx-font-weight: bold;
+}
+
+.clickable-link {
+    -fx-text-fill: #0069CC;
+}
+
+.clickable-link:hover,
+.clickable-container:hover .clickable-link {
+    -fx-underline: true;
+}
+
+.select-indicator {
+    -fx-background-color: #0840FF;
+}
+
+.tab {
+    -fx-background-color: #FFFFFF;
+}
+
+.button {
+    -fx-background-color: #577EFF;
+    -fx-text-fill: #F0F0F0;
+    -fx-background-insets: 0;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+    -fx-opacity: 0.8;
+}
+
+.button:hover {
+    -fx-opacity: 1;
+}

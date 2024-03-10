@@ -1,0 +1,66 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+
+# Bytecode directory
+bin/
+
+# IntelliJ IDEA files
+.idea/
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# NetBeans files
+nb-configuration.xml
+
+# Ant build directory
+# Gradle build directory
+build/
+
+# Maven build directory
+target/
+
+# Output directory
+out/
+
+# Lib directory
+lib/
+libs/
+
+# JAR files
+*.jar
+
+# Visual Studio Code directory
+.vscode/
+
+# Thumbnails created by Windows
+Thumbs.db
+
+# macOS directory attributes
+.DS_Store
+
+# User-specific IDE files
+.idea
+*.iml
+*.iws
+
+# Eclipse metadata
+.metadata/
+
+# macOS metadata
+.svn/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Gradle wrapper
+gradle-wrapper.jar
+gradle-wrapper.properties

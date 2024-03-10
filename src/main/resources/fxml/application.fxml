@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane fx:id="application" stylesheets="@../css/application_styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.ApplicationController">
+   <children>
+      <VBox>
+         <children>
+            <fx:include source="top_menu_bar/top_menu_bar.fxml" />
+            <HBox styleClass="main-content" VBox.vgrow="ALWAYS">
+               <children>
+                  <fx:include source="left_menu_bar/left_menu_bar.fxml" />
+                  <StackPane HBox.hgrow="ALWAYS">
+                     <children>
+                        <StackPane minHeight="500.0" minWidth="500.0">
+                           <children>
+                              <fx:include source="globe/globe.fxml" />
+                           </children>
+                           <StackPane.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="55.0" />
+                           </StackPane.margin>
+                        </StackPane>
+                        <fx:include source="hud/hud.fxml" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <fx:include source="modal/modal.fxml" />
+   </children>
+</StackPane>

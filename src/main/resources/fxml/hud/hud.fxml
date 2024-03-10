@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<StackPane minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.hud.HUDController">
+   <children>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" StackPane.alignment="TOP_LEFT">
+         <children>
+            <HBox alignment="CENTER" spacing="5.0" styleClass="selector-container">
+               <children>
+                  <Circle fx:id="globeHUDGeolocationServiceStatusIndicator" radius="8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <HBox.margin>
+                        <Insets right="4.0" />
+                     </HBox.margin></Circle>
+                  <Label text="Geolocation Service">
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <ComboBox fx:id="globeHUDGeolocationServiceSelector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="parameter-combo-box">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="4.0" left="10.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" spacing="5.0" styleClass="selector-container">
+               <children>
+                  <Label text="Weight Metric">
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <ComboBox fx:id="globeHUDWeightMetricSelector" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="parameter-combo-box">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ComboBox>
+               </children>
+               <padding>
+                  <Insets bottom="4.0" left="10.0" right="4.0" top="4.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </HBox>
+      <Label fx:id="globeHUDCurrentTracerouteTarget" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" StackPane.alignment="BOTTOM_LEFT">
+         <font>
+            <Font size="12.0" />
+         </font>
+         <styleClass>
+            <String fx:value="target-text" />
+            <String fx:value="bold-text" />
+         </styleClass></Label>
+      <fx:include fx:id="statusUpdatePopup" source="status_update_popup.fxml" StackPane.alignment="BOTTOM_RIGHT" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <stylesheets>
+      <URL value="@../../css/hud/hud_styles.css" />
+      <URL value="@../../css/global_styles.css" />
+   </stylesheets>
+</StackPane>

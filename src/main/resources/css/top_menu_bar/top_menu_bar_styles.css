@@ -1,0 +1,5 @@
+.top-menu-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+    -fx-view-order: 0;
+}

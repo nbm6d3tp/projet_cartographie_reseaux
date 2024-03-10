@@ -1,0 +1,11 @@
+.search-result {
+    -fx-background-color: #FFFFFF;
+}
+
+.search-result:hover {
+    -fx-background-color: #EEEEEE;
+}
+
+.search-text-field {
+    -fx-background-color: transparent;
+}

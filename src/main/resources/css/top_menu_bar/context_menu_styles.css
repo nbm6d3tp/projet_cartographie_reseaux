@@ -1,0 +1,14 @@
+.custom-context-menu {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 3;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 0);
+}
+
+.custom-context-menu .menu-item,
+.custom-context-menu .menu-item:hover {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}

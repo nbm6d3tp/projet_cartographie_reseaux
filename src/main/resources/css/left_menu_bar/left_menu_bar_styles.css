@@ -1,0 +1,17 @@
+.left-menu-bar {
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
+}
+
+.tab-title {
+    -fx-text-fill: #0840FF;
+}
+
+.header {
+    -fx-border-color: #0840FF;
+    -fx-border-width: 0 0 2 0;
+}
+
+.expand-button:hover {
+    -fx-opacity: 1;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ContextMenu fx:id="searchContextMenu" consumeAutoHidingEvents="false" hideOnEscape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="custom-context-menu" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.topmenubar.contextmenu.SearchContextMenuController">
+    <items>
+        <CustomMenuItem mnemonicParsing="false">
+            <content>
+                <VBox fx:id="searchContextMenuContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="7.0">
+                    <children>
+                        <Label fx:id="searchResultsNumber" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="low-text">
+                            <VBox.margin>
+                                <Insets left="5.0" />
+                            </VBox.margin>
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fx:id="searchResults" fitToWidth="true" hbarPolicy="NEVER" maxHeight="400.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="custom-scroll-pane">
+                           <content>
+                              <VBox fx:id="searchResultsContainer" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0">
+                                 <padding>
+                                    <Insets right="5.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+            </content>
+        </CustomMenuItem>
+    </items>
+</ContextMenu>

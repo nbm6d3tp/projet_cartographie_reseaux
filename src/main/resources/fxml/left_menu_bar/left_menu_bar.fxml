@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox styleClass="left-menu-bar" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.leftmenubar.LeftMenuBarController">
+   <fx:define>
+      <fx:include fx:id="targetsTab" source="tab/targets_tab.fxml" />
+      <fx:include fx:id="queueTab" source="tab/queue_tab.fxml" />
+      <fx:include fx:id="shortestPathTab" source="tab/shortest_path.fxml" />
+      <fx:include fx:id="statisticsTab" source="tab/statistics_tab.fxml" />
+   </fx:define>
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="header">
+         <children>
+            <VBox fx:id="targets" alignment="CENTER" opacity="0.8" spacing="5.0">
+               <children>
+                  <Label styleClass="tab-title" text="Targets">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="targetsIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+               </children>
+            </VBox>
+            <VBox fx:id="queue" alignment="CENTER" opacity="0.8" spacing="5.0">
+               <children>
+                  <Label styleClass="tab-title" text="Queue">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="queueIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="shortestPath" alignment="CENTER" opacity="0.8" spacing="5.0">
+               <children>
+                  <Label styleClass="tab-title" text="Shortest Path">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="shortestPathIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <VBox fx:id="statistics" alignment="CENTER" opacity="0.8" spacing="5.0">
+               <children>
+                  <Label styleClass="tab-title" text="Statistics">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <StackPane fx:id="statisticsIndicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+            <ImageView fx:id="expand" fitHeight="30.0" fitWidth="30.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" styleClass="expand-button">
+               <image>
+                  <Image url="@../../icons/expand.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="20.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <StackPane fx:id="content" minWidth="300.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding></StackPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <stylesheets>
+      <URL value="@../../css/left_menu_bar/left_menu_bar_styles.css" />
+      <URL value="@../../css/global_styles.css" />
+   </stylesheets>
+</VBox>

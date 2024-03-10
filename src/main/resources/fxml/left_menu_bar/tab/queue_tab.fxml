@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" styleClass="tab" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.leftmenubar.tab.QueueTabController">
+   <children>
+      <VBox>
+         <children>
+            <Label text="Pending">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+            <Separator>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" styleClass="custom-scroll-pane">
+               <content>
+                  <VBox fx:id="pendingTraceroute" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="Executing">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+            <Separator>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" styleClass="custom-scroll-pane">
+               <content>
+                  <VBox fx:id="executingTraceroute" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="Executed">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+            <Separator>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" styleClass="custom-scroll-pane">
+               <content>
+                  <VBox fx:id="executedTraceroute" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox>
+         <children>
+            <Label text="Failed">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="text" />
+                  <String fx:value="bold-text" />
+               </styleClass>
+            </Label>
+            <Separator>
+               <VBox.margin>
+                  <Insets bottom="5.0" top="5.0" />
+               </VBox.margin>
+            </Separator>
+            <ScrollPane hbarPolicy="NEVER" prefHeight="100.0" styleClass="custom-scroll-pane">
+               <content>
+                  <VBox fx:id="failedTraceroute" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/custom-scroll-pane.css" />
+      <URL value="@../../../css/global_styles.css" />
+   </stylesheets>
+</VBox>

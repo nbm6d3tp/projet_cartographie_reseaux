@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="statusUpdatePopup" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="2.0" visible="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.hud.StatusUpdatePopupController">
+   <children>
+      <StackPane fx:id="statusUpdatePopupLoadingBarContainer" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="6.0" styleClass="popup-loading-bar-background" visible="false">
+         <children>
+            <StackPane fx:id="statusUpdatePopupLoadingBar" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="popup-loading-bar" />
+         </children>
+      </StackPane>
+      <HBox fx:id="statusPopupMessageContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" styleClass="transparent-background">
+         <children>
+            <ImageView fx:id="statusUpdatePopupIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin></ImageView>
+            <Label fx:id="statusUpdatePopupMessage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="popup-message" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+   <stylesheets>
+      <URL value="@../../css/hud/status_update_popup_styles.css" />
+      <URL value="@../../css/global_styles.css" />
+   </stylesheets>
+   <styleClass>
+      <String fx:value="popup-container" />
+      <String fx:value="transparent-background" />
+   </styleClass>
+</VBox>

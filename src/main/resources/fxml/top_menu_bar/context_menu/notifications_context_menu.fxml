@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<ContextMenu fx:id="notificationsContextMenu" consumeAutoHidingEvents="false" hideOnEscape="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="custom-context-menu" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.topmenubar.contextmenu.NotificationsContextMenuController">
+    <items>
+        <CustomMenuItem hideOnClick="false" mnemonicParsing="false">
+            <content>
+                <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="7.0">
+                    <children>
+                        <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="300.0">
+                            <left>
+                                <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="NOTIFICATIONS" BorderPane.alignment="CENTER">
+                                    <styleClass>
+                                        <String fx:value="text" />
+                                        <String fx:value="bold-text" />
+                                    </styleClass></Label>
+                            </left>
+                            <VBox.margin>
+                                <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                            </VBox.margin>
+                            <right>
+                                <Label fx:id="markAllAsReadOption" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="clickable-link" text="Mark all as read" BorderPane.alignment="CENTER">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Label>
+                            </right>
+                        </BorderPane>
+                  <StackPane>
+                     <VBox.margin>
+                        <Insets left="3.0" right="3.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="noNotificationIndicator" styleClass="text" text="There is nothing for you here">
+                           <StackPane.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </StackPane.margin>
+                        </Label>
+                              <VBox fx:id="notificationsContainer" alignment="CENTER" spacing="3.0" />
+                     </children>
+                  </StackPane>
+                        <StackPane styleClass="notificationBottomButton">
+                            <children>
+                                <Label fx:id="viewAllNotificationsOption" styleClass="clickable-link" text="View all notifications">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="5.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                            </padding>
+                        </StackPane>
+                    </children>
+                </VBox>
+            </content>
+        </CustomMenuItem>
+    </items>
+</ContextMenu>

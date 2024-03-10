@@ -1,0 +1,43 @@
+.ip-input .text-field,
+.ip-input .label,
+.radio-input,
+.parameter-input .text-field,
+.parameter-input .label {
+    -fx-text-fill: #5F5F5F;
+}
+
+.ip-input .dot {
+    -fx-font-weight: bold;
+}
+
+.radio-input:selected .dot {
+    -fx-background-insets: 0;
+    -fx-background-color: #577EFF;
+}
+
+.toggle-button-on {
+    -fx-background-color: #577EFF;
+    -fx-text-fill: #F0F0F0;
+}
+
+.toggle-button-off {
+    -fx-background-color: #F0F0F0;
+    -fx-text-fill: #5F5F5F;
+}
+
+.toggle-button:hover {
+    -fx-opacity: 1;
+}
+
+.random-button {
+    -fx-background-color: #F0F0F0 !important;
+    -fx-padding: 0;
+}
+
+.error-message {
+    -fx-text-fill: rgb(238, 28, 48);
+}
+
+.success-message {
+    -fx-text-fill: rgb(22, 154, 36);
+}

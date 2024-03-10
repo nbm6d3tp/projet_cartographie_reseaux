@@ -1,0 +1,10 @@
+fr.internetcartographier
+fr.internetcartographier.model
+fr.internetcartographier.model.geolocationservice
+fr.internetcartographier.model.internetgraph
+fr.internetcartographier.util.shortestpath
+fr.internetcartographier.util.cache
+fr.internetcartographier.util.csv
+fr.internetcartographier.util.path
+fr.internetcartographier.util.properties
+fr.internetcartographier.util.statistics

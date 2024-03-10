@@ -1,0 +1,43 @@
+<project name="MyJavaFXApp" default="run" basedir=".">
+    <property name="src.dir" value="src/main/java" />
+    <property name="out.dir" value="build/classes" />
+    <property name="jar.name" value="MyJavaFXApp.jar" />
+    <property name="main.class" value="com.example.Main" />
+
+    <path id="classpath">
+        <fileset dir="libs">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <target name="init">
+        <mkdir dir="${out.dir}" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${src.dir}" destdir="${out.dir}">
+            <classpath refid="classpath" />
+        </javac>
+    </target>
+
+    <target name="package" depends="compile">
+        <jar destfile="${jar.name}" basedir="${out.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main.class}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="run" depends="package">
+        <java fork="true" classname="${main.class}">
+            <jvmarg value="--module-path" />
+            <jvmarg value="lib" /> <!-- Path to your JavaFX library (lib) -->
+            <jvmarg value="--add-modules" />
+            <jvmarg value="javafx.controls,javafx.fxml" />
+            <classpath>
+                <path refid="classpath" />
+                <pathelement location="${jar.name}" />
+            </classpath>
+        </java>
+    </target>
+</project>

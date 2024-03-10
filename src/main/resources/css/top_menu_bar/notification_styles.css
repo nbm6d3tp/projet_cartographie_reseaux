@@ -1,0 +1,24 @@
+.text {
+    -fx-text-fill: #5F5F5F;
+}
+
+.date {
+    -fx-text-fill: #7F7F7F;
+}
+
+.notification {
+    -fx-background-color: #FCFCFC;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.1), 3, 0.5, 0, 1);
+}
+
+.notification:hover {
+    -fx-opacity: 1;
+}
+
+.unread-notification {
+    -fx-background-color: #FFEBA5;
+}
+
+.delete:hover {
+    -fx-opacity: 1;
+}

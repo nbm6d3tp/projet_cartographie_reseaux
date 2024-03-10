@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+
+<VBox fx:id="option" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="5.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.topmenubar.option.NotificationsController">
+   <fx:define>
+        <fx:include fx:id="contextMenu" source="../context_menu/notifications_context_menu.fxml" />
+   </fx:define>
+   <children>
+      <StackPane>
+         <children>
+            <ImageView fx:id="icon" fitHeight="30.0" fitWidth="30.0" opacity="0.8" pickOnBounds="true" preserveRatio="true" styleClass="hover-image">
+               <image>
+                  <Image url="@../../../icons/notifications.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="notificationsIndicator" fill="#bf2525" radius="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" StackPane.alignment="TOP_RIGHT">
+               <StackPane.margin>
+                  <Insets right="2.0" top="2.0" />
+               </StackPane.margin>
+            </Circle>
+         </children>
+      </StackPane>
+      <StackPane fx:id="indicator" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3.0" styleClass="select-indicator" />
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/top_menu_bar/notifications_styles.css" />
+      <URL value="@../../../css/top_menu_bar/context_menu_styles.css" />
+      <URL value="@../../../css/global_styles.css" />
+   </stylesheets>
+</VBox>

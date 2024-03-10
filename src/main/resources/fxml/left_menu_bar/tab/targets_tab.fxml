@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" styleClass="bu" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.internetcartographier.controller.leftmenubar.tab.TargetsTabController">
+   <children>
+      <VBox spacing="20.0" VBox.vgrow="ALWAYS">
+         <children>
+            <VBox>
+               <children>
+                  <Label text="Input">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <Separator>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <VBox spacing="20.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <RadioButton fx:id="domainName" mnemonicParsing="false" selected="true" styleClass="radio-input" text="Domain name">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="targetType" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <VBox fx:id="domainNameInput" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" spacing="3.0" styleClass="ip-input">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Name">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="domainNameField" prefColumnCount="10" promptText="google.com" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <RadioButton fx:id="ipAddress" mnemonicParsing="false" styleClass="radio-input" text="IP Address" toggleGroup="$targetType">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </RadioButton>
+                              <VBox fx:id="ipAddressInput" disable="true" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" spacing="3.0" styleClass="ip-input">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="Input">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="ipAddress1" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipAddress2" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipAddress3" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipAddress4" prefColumnCount="2" />
+                                          <Button fx:id="ipAddressRandom" mnemonicParsing="false">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="button" />
+                                                <String fx:value="random-button" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <RadioButton fx:id="ipAddressesRange" mnemonicParsing="false" styleClass="radio-input" text="IP Addresses range" toggleGroup="$targetType">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </RadioButton>
+                              <VBox fx:id="ipAddressesRangeInput" disable="true" spacing="5.0">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" spacing="3.0" styleClass="ip-input">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="From">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="ipRangeFrom1" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeFrom2" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeFrom3" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeFrom4" prefColumnCount="2" />
+                                          <Button fx:id="ipRangeFromRandom" mnemonicParsing="false">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="button" />
+                                                <String fx:value="random-button" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_RIGHT" spacing="3.0" styleClass="ip-input">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" text="To">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="ipRangeTo1" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeTo2" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeTo3" prefColumnCount="2" />
+                                          <Label styleClass="dot" text="." />
+                                          <TextField fx:id="ipRangeTo4" prefColumnCount="2" />
+                                          <Button fx:id="ipRangeToRandom" mnemonicParsing="false">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="button" />
+                                                <String fx:value="random-button" />
+                                             </styleClass>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" spacing="5.0">
+                           <children>
+                              <RadioButton fx:id="ipAddressFile" mnemonicParsing="false" styleClass="radio-input" text="IP Addresses file" toggleGroup="$targetType">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </RadioButton>
+                              <VBox fx:id="ipAddressFileInput" disable="true">
+                                 <children>
+                                    <HBox alignment="CENTER_RIGHT" spacing="3.0">
+                                       <children>
+                                          <Label fx:id="fileName" maxHeight="1.7976931348623157E308" styleClass="low-text" text="No file selected">
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Button fx:id="chooseFile" mnemonicParsing="false" text="Choose file">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Traceroute parameters">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <Separator>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <VBox spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="3.0" styleClass="parameter-input">
+                           <children>
+                              <Label text="Host name resolution">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ToggleButton fx:id="hostNameResolution" mnemonicParsing="false" opacity="0.8" prefWidth="41.0" selected="true">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ToggleButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="3.0" styleClass="parameter-input">
+                           <children>
+                              <Label text="Max hops">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Spinner fx:id="maxHops" editable="true" prefWidth="70.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="3.0" styleClass="parameter-input">
+                           <children>
+                              <Label text="Timeout">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Spinner fx:id="timeout" editable="true" prefWidth="70.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Execution parameters">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="text" />
+                        <String fx:value="bold-text" />
+                     </styleClass>
+                  </Label>
+                  <Separator>
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <VBox spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="3.0" styleClass="parameter-input">
+                           <children>
+                              <Label text="Simultaneous traceroute">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Spinner fx:id="simultaneousTraceroute" editable="true" prefWidth="70.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Spinner>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" spacing="3.0" styleClass="parameter-input">
+                           <children>
+                              <Label text="Traceroute per minute">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Spinner fx:id="traceroutePerMinute" editable="true" prefWidth="70.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Spinner>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" spacing="5.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <Label fx:id="displayMessage">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="addToQueue" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="bold-text" text="ADD TO QUEUE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../../css/left_menu_bar/targets_styles.css" />
+      <URL value="@../../../css/global_styles.css" />
+   </stylesheets>
+</VBox>

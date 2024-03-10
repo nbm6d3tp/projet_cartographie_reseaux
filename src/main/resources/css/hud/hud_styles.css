@@ -1,0 +1,21 @@
+.parameter-combo-box {
+    -fx-background-color: transparent;
+}
+
+.gray-text,
+.parameter-combo-box .list-cell {
+    -fx-text-fill: #5F5F5F;
+}
+
+.parameter-combo-box .arrow-button .arrow {
+    -fx-background-color: #5F5F5F;
+}
+
+.target-text {
+    -fx-text-fill: #C4C4C4;
+}
+
+.selector-container {
+    -fx-background-color: #FFFFFF;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
+}
